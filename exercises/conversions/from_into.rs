@@ -44,6 +44,16 @@ impl Default for Person {
 
 impl From<&str> for Person {
     fn from(s: &str) -> Person {
+        if s.len() == 0{
+            return Person::default();
+        }
+        let args = s.split(",");
+        if args.size() != 2{
+            return Person::default();
+        }
+        Person{
+            
+        }
     }
 }
 
